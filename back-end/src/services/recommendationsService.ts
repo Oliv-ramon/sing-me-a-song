@@ -1,3 +1,4 @@
+import faker from "@faker-js/faker";
 import { Recommendation } from "@prisma/client";
 import { recommendationRepository } from "../repositories/recommendationRepository.js";
 import { conflictError, notFoundError } from "../utils/errorUtils.js";
@@ -82,6 +83,67 @@ function getScoreFilter(random: number) {
   return "lte";
 }
 
+function reset() {
+  return recommendationRepository.removeAll();
+}  
+
+function seed() {
+  const recommendations = [
+    { 
+      name: faker.lorem.words(2),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+      score: Number(faker.random.numeric()),
+    },
+    { 
+      name: faker.lorem.words(2),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+      score: Number(faker.random.numeric()),
+    },
+    { 
+      name: faker.lorem.words(2),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+      score: Number(faker.random.numeric()),
+    },
+    { 
+      name: faker.lorem.words(2),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+      score: Number(faker.random.numeric()),
+    },
+    { 
+      name: faker.lorem.words(2),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+      score: Number(faker.random.numeric()),
+    },
+    { 
+      name: faker.lorem.words(2),
+      score: Number(faker.random.numeric()),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+    },
+    { 
+      name: faker.lorem.words(2),
+      score: Number(faker.random.numeric()),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+    },
+    { 
+      name: faker.lorem.words(2),
+      score: Number(faker.random.numeric()),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+    },
+    { 
+      name: faker.lorem.words(2),
+      score: Number(faker.random.numeric()),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+    },
+    { 
+      name: faker.lorem.words(2),
+      score: Number(faker.random.numeric()),
+      youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+    },
+  ];
+
+  return recommendationRepository.seed(recommendations);
+}  
+
 export const recommendationService = {
   insert,
   upvote,
@@ -91,4 +153,6 @@ export const recommendationService = {
   getById: getByIdOrFail,
   getTop,
   getByScore,
+  reset,
+  seed,
 };

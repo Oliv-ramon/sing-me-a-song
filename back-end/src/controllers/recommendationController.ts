@@ -55,6 +55,18 @@ async function getById(req: Request, res: Response) {
   res.send(recommendation);
 }
 
+async function reset(_req: Request, res: Response) {
+  await recommendationService.reset();
+
+  res.sendStatus(201);
+}
+
+async function seed(_req: Request, res: Response) {
+  await recommendationService.seed();
+
+  res.sendStatus(201);
+}
+
 export const recommendationController = {
   insert,
   upvote,
@@ -63,4 +75,6 @@ export const recommendationController = {
   getTop,
   get,
   getById,
+  reset,
+  seed,
 };

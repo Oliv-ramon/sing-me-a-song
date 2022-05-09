@@ -3,6 +3,11 @@ import { recommendationController } from "../controllers/recommendationControlle
 
 const recommendationRouter = Router();
 
+if(process.env.NODE_ENV === "test") {
+  recommendationRouter.post("/reset", recommendationController.reset);
+  recommendationRouter.post("/seed", recommendationController.seed);
+}
+
 recommendationRouter.post("/", recommendationController.insert);
 recommendationRouter.get("/", recommendationController.get);
 recommendationRouter.get("/random", recommendationController.random);
