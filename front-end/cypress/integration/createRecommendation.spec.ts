@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe("E2E tests", () => {
   it("should create an recommendation", () => {
     const recommendation = {
@@ -62,7 +64,7 @@ describe("E2E tests", () => {
 
     cy.request("POST", "http://localhost:5000/recommendations/reset");
   });
-  
+
   it("should show the top recommendations", () => {
     cy.request("POST", "http://localhost:5000/recommendations/seed");
     
