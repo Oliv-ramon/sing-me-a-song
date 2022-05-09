@@ -1,4 +1,4 @@
-import { prisma } from "../../src/database";
+import { prisma } from "../../../src/database";
 import recommendationFactory from "./recommendationFactory";
 
 export default async function createManyRecommendationsFactory(amount: number) {

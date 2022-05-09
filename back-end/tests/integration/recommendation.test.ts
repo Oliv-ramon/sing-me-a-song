@@ -1,9 +1,9 @@
 import supertest from "supertest";
 import app from "../../src/app.js";
 import { prisma } from "../../src/database.js";
-import createManyRecommendationsFactory from "../factories/createManyRecommendationsFactory.js";
-import createRecommendationFactory from "../factories/createRecommendationFactory.js";
-import recommendationFactory from "../factories/recommendationFactory.js";
+import createManyRecommendationsFactory from "./factories/createManyRecommendationsFactory.js";
+import createRecommendationFactory from "./factories/createRecommendationFactory.js";
+import recommendationFactory from "./factories/recommendationFactory.js";
 
 describe("Recommendations Integration Tests", () => {
   afterAll(async () => await truncateRecommendations());
