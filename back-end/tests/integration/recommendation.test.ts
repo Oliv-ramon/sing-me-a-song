@@ -1,7 +1,7 @@
 import supertest from "supertest";
 import app from "../../src/app.js";
 import { prisma } from "../../src/database.js";
-import createRecommendationsFactory from "../factories/createRecommendationsFactory.js";
+import createManyRecommendationsFactory from "../factories/createManyRecommendationsFactory.js";
 import createRecommendationFactory from "../factories/createRecommendationFactory.js";
 import recommendationFactory from "../factories/recommendationFactory.js";
 
@@ -71,7 +71,7 @@ describe("Recommendations Integration Tests", () => {
 
   describe("GET /recommendations", () => {
     it("should return 200 and the recommendations list", async () => {
-      await createRecommendationsFactory(10);
+      await createManyRecommendationsFactory(10);
 
       const { status, body: recommendations } = await supertest(app).get(`/recommendations`);
   
