@@ -1,4 +1,4 @@
-import { Prisma, Recommendation } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { prisma } from "../database.js";
 import { CreateRecommendationData } from "../services/recommendationsService.js";
 
