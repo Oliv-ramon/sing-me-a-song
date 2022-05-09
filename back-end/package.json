@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest -i"
+    "test": "npx prisma db seed && NODE_OPTIONS=--experimental-vm-modules npx jest -i"
   },
   "keywords": [],
   "author": "",

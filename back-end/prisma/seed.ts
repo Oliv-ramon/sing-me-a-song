@@ -6,43 +6,53 @@ async function main() {
     data: [
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+        score: Number(faker.random.numeric()),
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+        score: Number(faker.random.numeric()),
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+        score: Number(faker.random.numeric()),
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+        score: Number(faker.random.numeric()),
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
+        score: Number(faker.random.numeric()),
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        score: Number(faker.random.numeric()),
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        score: Number(faker.random.numeric()),
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        score: Number(faker.random.numeric()),
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        score: Number(faker.random.numeric()),
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
       },
       { 
         name: faker.lorem.words(2),
-        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q"
+        score: Number(faker.random.numeric()),
+        youtubeLink: "https://www.youtube.com/watch?v=9sTQ0QdkN3Q",
       },
     ],
   });
